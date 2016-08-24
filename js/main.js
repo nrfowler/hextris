@@ -225,7 +225,7 @@ function setStartScreen() {
 	requestAnimFrame(animLoop);
 }
 
-var spd = 1;
+var spd = 1; //game speed
 
 function animLoop() {
 	switch (gameState) {

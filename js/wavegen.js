@@ -20,10 +20,10 @@ function waveGen(hex) {
 	this.nextGen = 2700;
 	this.start = 0;
 	this.colors = colors;
-	this.ct = 0;
+	this.ct = 100; //??
 	this.hex = hex;
-	this.difficulty = 1;
-	this.dt = 0;
+	this.difficulty = 100; //set block velocity here
+	this.dt = 100; //inter-block speed??
 	this.update = function() {
 		this.currentFunction();
 		this.dt = (settings.platform == 'mobile' ? 14 : 16.6667) * MainHex.ct;
