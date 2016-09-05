@@ -1,3 +1,14 @@
+
+Hextris Reverse Engineered
+==========
+I am reviewing Hextris' code in order to understand the level mechanics and HTML5 game programming in general. I found that the first couple of minutes were too easy and I wanted the game to initialize at a higher level - which was my initial motivation for looking into the code. The conclusion I have come to so far is that the "level" is best set by modifying this.nextGen in the wavegen.js file. I prefer to set it at 2000. 
+
+
+
+Here is Hextris' original Readme: 
+
+
+
 Hextris
 ==========
 
