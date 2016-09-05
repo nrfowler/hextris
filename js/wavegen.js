@@ -6,24 +6,25 @@ function blockDestroyed() {
 	} else {
 		waveone.nextGen = 600;
 	}
-
+	console.log("Difficulty: "+waveone.difficulty)
+	console.log("NextGen: "+waveone.nextGen)
 	if (waveone.difficulty < 35) {
 		waveone.difficulty += 0.085 * settings.speedModifier;
 	} else {
-		waveone.difficulty = 35;
+		waveone.difficulty = 35; //maximum difficulty
 	}
 }
 
 function waveGen(hex) {
 	this.lastGen = 0;
 	this.last = 0;
-	this.nextGen = 2700;
+	this.nextGen = 1500; //SET HERE: time between generation of blocks;original value is 2700; good starting value is 2000
 	this.start = 0;
 	this.colors = colors;
-	this.ct = 100; //??
+	this.ct = 1; //??
 	this.hex = hex;
-	this.difficulty = 100; //set block velocity here
-	this.dt = 100; //inter-block speed??
+	this.difficulty = 8; //SET HERE: block velocity
+	this.dt = 1; //??
 	this.update = function() {
 		this.currentFunction();
 		this.dt = (settings.platform == 'mobile' ? 14 : 16.6667) * MainHex.ct;
